@@ -4,11 +4,6 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  use {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
-	  -- or                            , branch = '0.1.x',
-	  requires = { {'nvim-lua/plenary.nvim'} }
-  }
   use ({
 	  'folke/tokyonight.nvim',
 	  as = 'tokyonight',
@@ -17,7 +12,6 @@ return require('packer').startup(function(use)
 	  end
   })
   use ('nvim-treesitter/nvim-treesitter', { run =  ':TSUpdate'})
-  use ('theprimeagen/harpoon')
   use ('mbbill/undotree')
   use ('tpope/vim-fugitive')
   use {
@@ -40,5 +34,5 @@ return require('packer').startup(function(use)
 		  {'L3MON4D3/LuaSnip'},
 		  {'rafamadriz/friendly-snippets'},
 	  }
-} 
+}
 end)
